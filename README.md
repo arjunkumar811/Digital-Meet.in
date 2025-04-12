@@ -1,84 +1,118 @@
-# Turborepo starter
+# 🌌 Build a Metaverse from Scratch
 
-This Turborepo starter is maintained by the Turborepo core team.
+Welcome to the **Metaverse** project — a full roadmap for building a decentralized 3D world with modern technologies.
 
-## Using this example
+---
 
-Run the following command:
+## ✨ Vision
 
-```sh
-npx create-turbo@latest
+> Build a scalable Metaverse where users can explore, interact, own assets, and participate in a virtual economy.
+
+---
+
+## 🛠 Tech Stack
+
+| Layer            | Technology                           |
+|------------------|--------------------------------------|
+| Monorepo         | TurboRepo                            |
+| Frontend         | React.js + Vite / Next.js + Three.js / Babylon.js |
+| Backend          | Node.js + Express.js                 |
+| Database         | PostgreSQL (via Prisma ORM)          |
+| ORM              | Prisma                               |
+| Realtime         | WebSockets, WebRTC                   |
+| Blockchain (optional) | Ethereum, Polygon (NFTs)          |
+| Hosting          | Vercel, AWS, Cloudflare Workers      |
+| Authentication   | MetaMask (Web3 Wallets) + JWT        |
+
+---
+
+## 📚 Prerequisites
+
+Before you start, make sure you have:
+
+- ✅ Strong basics of HTML, CSS, JavaScript
+- ✅ React.js (components, hooks, context)
+- ✅ Node.js, Express.js
+- ✅ WebSocket basics (for real-time communication)
+- ✅ Prisma ORM basics (schema, migrations, relations)
+- ✅ Database basics (PostgreSQL recommended)
+- ✅ Git and GitHub usage
+
+Optional (for blockchain features):
+- ✅ Understanding of Ethereum, Wallets (MetaMask), and NFTs
+
+---
+
+## 🧩 Full Roadmap
+
+### Phase 1: Environment Setup
+- [ ] Initialize a **TurboRepo** workspace
+- [ ] Create two packages: `apps/frontend` (React.js app) and `apps/backend` (Node.js Express server)
+- [ ] Setup shared packages if needed (e.g., types, utils)
+
+### Phase 2: Frontend - Basic World
+- [ ] Create a 3D scene using Three.js or Babylon.js
+- [ ] Add basic controls (camera movement, object interaction)
+- [ ] Build a simple player avatar (placeholder model)
+
+### Phase 3: Backend - API & WebSocket
+- [ ] Setup Express.js server
+- [ ] Create REST API routes for users, assets, rooms
+- [ ] Integrate WebSocket server for real-time communication (player movements, chat)
+
+### Phase 4: Database - Prisma
+- [ ] Setup Prisma in backend
+- [ ] Create `User`, `Asset`, `Room` models
+- [ ] Setup migrations and connect to PostgreSQL
+
+### Phase 5: Authentication
+- [ ] Implement traditional login/signup (JWT)
+- [ ] Add optional Web3 wallet login (MetaMask)
+
+### Phase 6: Multiplayer Features
+- [ ] Sync player positions across clients using WebSockets
+- [ ] Create chat rooms
+- [ ] Allow users to join/leave worlds
+
+### Phase 7: Asset Ownership (optional)
+- [ ] Integrate blockchain NFT ownership (ERC-721, ERC-1155)
+- [ ] Display owned assets inside the Metaverse
+
+### Phase 8: Deployment
+- [ ] Deploy frontend to Vercel
+- [ ] Deploy backend to AWS / Render
+- [ ] Setup environment variables (Database URL, JWT Secret, etc.)
+
+---
+
+## 📂 Project Structure
+
+```
+/apps
+  /frontend  --> React.js + Vite (or Next.js)
+  /backend   --> Node.js + Express.js + Prisma
+/packages
+  /shared    --> (optional) shared code: types, utils
 ```
 
-## What's inside?
+---
 
-This Turborepo includes the following packages/apps:
+## 📢 Important Notes
 
-### Apps and Packages
+- Use **WebSocket** (Socket.IO / ws) for multiplayer interaction
+- Prefer **Prisma** migrations over manual SQL
+- Optimize 3D assets for better performance (low-poly models)
+- Keep frontend and backend **loosely coupled**
 
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `@repo/ui`: a stub React component library shared by both `web` and `docs` applications
-- `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
+---
 
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
+## 🤝 Contributing
 
-### Utilities
+Contributions, ideas, and pull requests are welcome!  
+Let's build the Metaverse together. 🚀
 
-This Turborepo has some additional tools already setup for you:
+---
 
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
+## 📝 License
 
-### Build
-
-To build all apps and packages, run the following command:
-
-```
-cd my-turborepo
-pnpm build
-```
-
-### Develop
-
-To develop all apps and packages, run the following command:
-
-```
-cd my-turborepo
-pnpm dev
-```
-
-### Remote Caching
-
-> [!TIP]
-> Vercel Remote Cache is free for all plans. Get started today at [vercel.com](https://vercel.com/signup?/signup?utm_source=remote-cache-sdk&utm_campaign=free_remote_cache).
-
-Turborepo can use a technique known as [Remote Caching](https://turbo.build/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
-
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup?utm_source=turborepo-examples), then enter the following commands:
-
-```
-cd my-turborepo
-npx turbo login
-```
-
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
-
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
-
-```
-npx turbo link
-```
-
-## Useful Links
-
-Learn more about the power of Turborepo:
-
-- [Tasks](https://turbo.build/docs/core-concepts/monorepos/running-tasks)
-- [Caching](https://turbo.build/docs/core-concepts/caching)
-- [Remote Caching](https://turbo.build/docs/core-concepts/remote-caching)
-- [Filtering](https://turbo.build/docs/core-concepts/monorepos/filtering)
-- [Configuration Options](https://turbo.build/docs/reference/configuration)
-- [CLI Usage](https://turbo.build/docs/reference/command-line-reference)
+This project is licensed under the MIT License.
