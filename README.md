@@ -1,4 +1,4 @@
-# 🌌 Build a Metaverse from Scratch
+# 🌌 Build a DIGITAL-MEET.in from Scratch
 
 Welcome to the **Metaverse** project — a full roadmap for building a decentralized 3D world with modern technologies.
 
