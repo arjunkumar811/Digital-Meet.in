@@ -1,12 +1,12 @@
 # 🌌 Build a DIGITAL-MEET.in from Scratch
 
-Welcome to the **Metaverse** project — a full roadmap for building a decentralized 3D world with modern technologies.
+Welcome to the ** DIGITAL-MEET.in** project — a full roadmap for building a decentralized 3D world with modern technologies.
 
 ---
 
 ## ✨ Vision
 
-> Build a scalable Metaverse where users can explore, interact, own assets, and participate in a virtual economy.
+> Build a scalable  DIGITAL-MEET.in where users can explore, interact, own assets, and participate in a virtual economy.
 
 ---
 
@@ -76,7 +76,7 @@ Optional (for blockchain features):
 
 ### Phase 7: Asset Ownership (optional)
 - [ ] Integrate blockchain NFT ownership (ERC-721, ERC-1155)
-- [ ] Display owned assets inside the Metaverse
+- [ ] Display owned assets inside the  DIGITAL-MEET.in
 
 ### Phase 8: Deployment
 - [ ] Deploy frontend to Vercel
@@ -109,7 +109,7 @@ Optional (for blockchain features):
 ## 🤝 Contributing
 
 Contributions, ideas, and pull requests are welcome!  
-Let's build the Metaverse together. 🚀
+Let's build the  DIGITAL-MEET.in together. 🚀
 
 ---
 
