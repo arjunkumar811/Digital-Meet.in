@@ -33,5 +33,42 @@ describe("Authentication", () => {
 
         expect(response.status).toBe(400)
     })
+
+    test('Signin succeeds if the username and password are correct', async () => {
+        const username = `Arjun-${Math.random()}`;
+        const password = "123456";
+    
+        await axios.post(`${BACKEND_URL}/api/v1/signup`, {
+            username,
+            password
+        });
+    
+        const response = await axios.post(`${BACKEND_URL}/api/v1/signin`, {
+            username,
+            password
+        });
+    
+        expect(response.statusCode).toBe(200);
+        expect(response.body.token).toBeDefined();
+    });
+
+    test('Signin fails if the username and password are incorrect', async () => {
+        const username = `Arjun-${Math.random()}`;
+        const password = "123456";
+    
+        await axios.post(`${BACKEND_URL}/api/v1/signup`, {
+            username,
+            password
+        });
+    
+        const response = await axios.post(`${BACKEND_URL}/api/v1/signin`, {
+            username: "wrong-username",
+            password,
+        });
+    
+        expect(response.statusCode).toBe(403);
+    });
+
+
 })
 
