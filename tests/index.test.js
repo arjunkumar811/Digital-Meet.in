@@ -22,5 +22,16 @@ describe("Authentication", () => {
         })
         expect(updatedResponse.status).toBe(400)
     })
+
+    test ('Signup request fails if the uername is  empty', async() => {
+        const username = `shiruvati-${Math.random()}`
+        const password = "123456"
+
+        const response  = await axios.post(`${BACKEND_URL}/api/v1/signup`, {
+            password
+        })
+
+        expect(response.status).toBe(400)
+    })
 })
 
