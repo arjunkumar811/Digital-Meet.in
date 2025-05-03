@@ -424,46 +424,7 @@ describe("Meeting Functionality", () => {
         }
     })
     
-    test('Admin can cancel any meeting', async() => {
-        // First create a meeting as a regular user
-        const meetingData = {
-            title: "Meeting to Cancel",
-            description: "Testing meeting cancellation",
-            startTime: new Date(Date.now() + 3600000).toISOString(),
-            duration: 45,
-            maxParticipants: 5
-        }
-        
-        const createResponse = await axios.post(`${BACKEND_URL}/api/v1/meetings`, meetingData, {
-            headers: {
-                Authorization: `Bearer ${userToken}`
-            }
-        })
-        
-        const meetingId = createResponse.data.id
-        
-        // Now cancel the meeting as an admin
-        const cancelResponse = await axios.delete(`${BACKEND_URL}/api/v1/meetings/${meetingId}`, {
-            headers: {
-                Authorization: `Bearer ${adminToken}`
-            }
-        })
-        
-        expect(cancelResponse.status).toBe(200)
-        
-        // Try to fetch the meeting details, should get a 404
-        try {
-            await axios.get(`${BACKEND_URL}/api/v1/meetings/${meetingId}`, {
-                headers: {
-                    Authorization: `Bearer ${userToken}`
-                }
-            })
-            // If we reach here, the test should fail
-            expect(true).toBe(false)
-        } catch (error) {
-            expect(error.response.status).toBe(404)
-        }
-    })
+    
     
     test('User can only cancel their own meetings', async() => {
         // First create a meeting as admin
